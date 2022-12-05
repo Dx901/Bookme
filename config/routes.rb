@@ -7,9 +7,15 @@ Rails.application.routes.draw do
 
 
   devise_for :users
-  root to: 'home#index'
-  # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
-  # Defines the root path route ("/")
-  # root "articles#index"
+  authenticated :user do
+    root to: "home#dashboard", as: :authenticated_root
+  end
+
+  root to: 'home#index'
+ 
 end
+
+# Use a built-in routing method by the devise gem
+# The authentiacted :user checks if a user is indeed signed in 
+# and if so redirected to a new root path
