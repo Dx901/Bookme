@@ -7,4 +7,6 @@ has_person_name
          :recoverable, :rememberable, :validatable
 
   has_many :booking_types
+
+  validates :booking_link, presence: true
 end
