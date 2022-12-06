@@ -1,0 +1,2 @@
+module BookinTypesHelper
+end
