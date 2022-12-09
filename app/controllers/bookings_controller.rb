@@ -61,7 +61,7 @@ class BookingsController < ApplicationController
 
     payment_intent = Stripe::PaymentIntent.create(
       amount: amount,
-      currency: 'usd',
+      currency: 'ksh',
       automatic_payment_methods: {
         enabled: true
       },
