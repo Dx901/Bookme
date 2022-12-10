@@ -17,7 +17,7 @@ Rails.application.configure do
 
   # Enable server timing
   config.server_timing = true
-  cofig.hosts << "rolengiapps.com" 
+  config.hosts << "rolengiapps.com" 
 
   # Enable/disable caching. By default caching is disabled.
   # Run rails dev:cache to toggle caching.
